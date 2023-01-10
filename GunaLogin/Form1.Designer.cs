@@ -47,6 +47,7 @@
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2Button();
             this._CancelDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
             this._LoginDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this._EasterEgg = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.cimg_ProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             this.cimg_ProfilePicture.TabIndex = 0;
             this.cimg_ProfilePicture.TabStop = false;
             this.cimg_ProfilePicture.UseTransparentBackground = true;
+            this.cimg_ProfilePicture.DoubleClick += new System.EventHandler(this.onProfilePictureDoubleClick);
             // 
             // tb_Mail
             // 
@@ -192,6 +194,15 @@
             this._LoginDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this._LoginDialog.Text = "Du wurdest erfolgreich eingeloggt. ";
             // 
+            // _EasterEgg
+            // 
+            this._EasterEgg.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this._EasterEgg.Caption = "Yuhuu!";
+            this._EasterEgg.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this._EasterEgg.Parent = null;
+            this._EasterEgg.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this._EasterEgg.Text = "You found an EasterEgg!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -221,5 +232,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox cimg_ProfilePicture;
         private Guna.UI2.WinForms.Guna2MessageDialog _CancelDialog;
         private Guna.UI2.WinForms.Guna2MessageDialog _LoginDialog;
+        private Guna.UI2.WinForms.Guna2MessageDialog _EasterEgg;
     }
 }

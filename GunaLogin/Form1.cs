@@ -38,5 +38,10 @@ namespace GunaLogin
                     Application.Exit();
             }
         }
+
+        private void onProfilePictureDoubleClick(object sender, EventArgs e)
+        {
+            _EasterEgg.Show();
+        }
     }
 }
